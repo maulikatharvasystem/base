@@ -1,0 +1,17 @@
+development:
+  adapter: mysql2
+  host: localhost
+  database: globe_development
+  pool: 5
+  username: root
+  password: root
+  socket: /run/mysqld/mysqld.sock
+
+test:
+  adapter: mysql2
+  host: localhost
+  database: globe_test
+  pool: 5
+  username: root
+  password: root
+  socket: /run/mysqld/mysqld.sock

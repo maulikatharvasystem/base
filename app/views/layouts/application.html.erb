@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <%= stylesheet_link_tag 'application', {:media => :all} %>
+    <%=javascript_include_tag 'application'%>
+    <%= csrf_meta_tags %>
+  </head>
+</html>
+<div class="container-narrow col-md-12">
+  <div class="masthead">
+    <%= render 'layouts/user_header' %>
+    <h3 class="muted"><%= link_to "SimpleDevise", root_path %></h3>
+    <h5 class="muted">A demo of using SimpleDB with Devise</h5>
+  </div>
+  <hr />
+  <%= yield %>
+  <div style="clear: both"></div>
+  <footer class="page__footer">
+    <% if content_for? :footer %>
+      <%= yield :footer %>
+    <% else %>
+      <%= render 'layouts/footer' %>
+    <% end %>
+  </footer>
+</div>

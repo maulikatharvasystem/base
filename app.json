@@ -1,0 +1,7 @@
+{
+  "name": "Global Sample",
+  "description": "Just a test app with social media integration",
+  "repository": "https://bitbucket.org/atharvasystem/base",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": ["node", "express", "static"]
+}

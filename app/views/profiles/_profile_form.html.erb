@@ -1,0 +1,17 @@
+<div class="panel panel-default col-md-6 col-md-offset-3">
+  <div class="panel-heading">
+    <h1>Profile Detail</h1>
+  </div>
+  <div class="panel-body">
+
+    <%= simple_form_for @profile, url: user_profile_path do |f| %>
+      <%= f.input :first_name %>
+      <%= f.input :last_name %>
+      <%= f.input :dob, as: :string, label: 'Date of Birth', input_html: { class: 'date_select' } %>
+      <%= f.input :address %>
+      <%= f.input :phone_number %>
+
+      <%= f.button :submit, class: 'btn-primary' %>
+    <% end %>
+  </div>
+</div>

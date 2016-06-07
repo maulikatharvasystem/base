@@ -1,0 +1,14 @@
+<ul class="nav nav-pills pull-right">
+  <% if user_signed_in? %>
+    <li class="dropdown-toggle show-on-hover" data-toggle="dropdown"><%= image_tag current_user.image.present? ? current_user.image : "#{SITE_BASE_URL}assets/user.png"%>
+      <ul class="dropdown-menu" style="z-index: 9999;">
+        <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+        <li><%= link_to 'Edit Profile', current_user.profile.present? ? edit_user_profile_path : new_user_profile_path, method: :get  %></li>
+        <li><%= link_to 'User Settings', 'javascript:;' %></li>
+      </ul>
+    </li>
+  <% else %>
+    <li><%= link_to "Sign in", new_user_session_path %></li>
+    <li><%= link_to "Sign up", new_user_registration_path %></li>
+  <% end %>
+</ul>
